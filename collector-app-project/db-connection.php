@@ -68,10 +68,3 @@ function fetchAllReleaseData(PDO $dbConnection): array
 
     return fetchAll($dbConnection, $sql);
 }
-
-//$pdo = connectToDb('collector-app');
-//
-//
-//echo '<pre>';
-//print_r(fetchAllReleaseData($pdo));
-//echo '</pre>';

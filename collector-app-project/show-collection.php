@@ -9,18 +9,22 @@ $dbdata = fetchAllReleaseData($pdo);
 function displayReleases(array $data): void
 {
     foreach ($data as $release){
-        echo '<img src="images/' . $release['image_url'] . '">';
-        echo '<h1>' . $release['artist'] . '</h1>';
-        echo '<h2>' . $release['release_name'] . '</h2>';
-        echo '<p>' . $release['label'] . '</p>';
-        echo '<p>' . $release['year'] . '</p>';
-        echo '<p>' . $release['format'] . '</p>';
+        $releaseComponent =
+            '<div class="release">'
+            . '<img src="images/' . $release['image_url'] . '">'
+            . '<h1>' . $release['artist'] . '</h1>'
+            . '<h2>' . $release['release_name'] . '</h2>'
+            . '<p>' . $release['label'] . '</p>'
+            . '<p>' . $release['year'] . '</p>'
+            . '<p>' . $release['format'] . '</p>'
+            . '</div>';
+        echo $releaseComponent;
     }
 }
 
 
 
-displayReleases($dbdata);
+// displayReleases($dbdata);
 
 
 
@@ -35,7 +39,7 @@ displayReleases($dbdata);
 
 
 
-echo '<pre>';
-print_r($dbdata[0]);
-echo '</pre>';
+//echo '<pre>';
+//print_r($dbdata[0]);
+//echo '</pre>';
 

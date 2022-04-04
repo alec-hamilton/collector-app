@@ -3,11 +3,7 @@
 require_once 'show-collection.php';
 require_once 'db-connection.php';
 
-$pdo = connectToDb('collector-app');
-
 $dbdata = fetchAllReleaseData($pdo);
-
-displayReleases($dbdata);
 
 ?>
 
@@ -20,19 +16,14 @@ displayReleases($dbdata);
 	<title>Page Title</title>
 	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
-
 </head>
 
 <body>
-	<div>
-		<?php foreach ($data as $release){
-        echo '<img src="images/' . $release['image_url'] . '">';
-		echo '<h1>' . $release['artist'] . '</h1>';
-		echo '<h2>' . $release['release_name'] . '</h2>';
-		echo '<p>' . $release['label'] . '</p>';
-		echo '<p>' . $release['year'] . '</p>';
-		echo '<p>' . $release['format'] . '</p>';
-		} ?>
+    <nav class="nav">
+        <a class="menu-link" href="#">Alec's Records</a>
+    </nav>
+	<div class="release-container">
+		<?php displayReleases($dbdata); ?>
 	</div>
 </body>
 
