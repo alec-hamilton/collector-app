@@ -60,11 +60,11 @@ function fetchAll(PDO $dbConnection, string $sql, array $params = null): array
 
 function fetchAllReleaseData(PDO $dbConnection): array
 {
-    $sql = 'SELECT `releases`.`id`, `releases`.`artist`, `releases`.`release_name`, 
-       `releases`.`label`, `releases`.`year`, `formats`.`format`, `releases`.`image_url` 
-FROM `releases`
-	INNER JOIN `formats`
-	ON `releases`.`format` = `formats`.`id`;';
+    $sql = 'SELECT `releases`.`id`, `releases`.`artist`, `releases`.`release_name`,'
+        . '`releases`.`label`, `releases`.`year`, `formats`.`format`, `releases`.`image_url`'
+        . 'FROM `releases`'
+	    . 'INNER JOIN `formats`'
+	    . 'ON `releases`.`format` = `formats`.`id`;';
 
     return fetchAll($dbConnection, $sql);
 }
