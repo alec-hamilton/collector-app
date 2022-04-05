@@ -1,0 +1,54 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.release {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  padding: 10px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.release-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h2 {
+  align-self: start;
+}
+
+h1 {
+  font-family: arial, sans-serif;
+  align-self: start;
+}
+
+.release > p {
+  align-self: start;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: #212121;
+  margin: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 700px){
+
+}
+
+
