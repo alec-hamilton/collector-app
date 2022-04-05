@@ -68,3 +68,4 @@ function fetchAllReleaseData(PDO $dbConnection): array
 
     return fetchAll($dbConnection, $sql);
 }
+

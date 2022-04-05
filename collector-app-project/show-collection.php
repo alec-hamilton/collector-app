@@ -21,25 +21,3 @@ function displayReleases(array $data): void
         echo $releaseComponent;
     }
 }
-
-
-
-// displayReleases($dbdata);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//echo '<pre>';
-//print_r($dbdata[0]);
-//echo '</pre>';
-
