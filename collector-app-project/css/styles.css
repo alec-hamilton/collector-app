@@ -31,6 +31,7 @@ img {
 
 .release > img {
   align-self: center;
+  flex-grow: 1;
 }
 
 .release-container {
@@ -180,11 +181,18 @@ label {
 
 #submit {
   font-family: 'Mukta', sans-serif;
-  color: var(--dark);
+  color: #FFFFFF;
   padding: 0.4rem 1rem;
   border-radius: 5px;
-  border-width: 1px;
+  border-width: 0;
   flex-grow: 1;
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+
+#submit:hover {
+  background-color: var(--light);
+  cursor: pointer;
 }
 
 .form-input > input {
@@ -205,11 +213,51 @@ label {
   margin: 0;
 }
 
-@media only screen and (min-width: 600px) {
-  .release {
-    width: 280px;
+@media only screen and (min-width: 680px) {
+  .release-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    width: 85vw;
+    margin: 0 auto;
   }
+
+  .release {
+    width: auto;
+  }
+
 }
+
+@media only screen and (min-width: 1050px) {
+  .release-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    width: 85vw;
+    margin: 0 auto;
+  }
+
+  .release {
+    width: auto;
+  }
+
+}
+
+@media only screen and (min-width: 1400px) {
+  .release-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    width: 85vw;
+    margin: 0 auto;
+  }
+
+  .release {
+    width: auto;
+  }
+
+}
+
 
 
 
