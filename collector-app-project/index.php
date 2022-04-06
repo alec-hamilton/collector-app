@@ -19,9 +19,7 @@ $dbdata = fetchAllReleaseData($pdo);
 </head>
 
 <body>
-    <nav class="nav">
-        <a class="menu-link" href="#">Alec's Records</a>
-    </nav>
+    <?php include "header.html"; ?>
 	<div class="release-container">
 		<?php displayReleases($dbdata); ?>
 	</div>

@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #F5F5F5;
+  --light: #8DB48E;
+  --dark: #4D724D;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   padding: 0;
+  background-color: var(--bg);
 }
 
 img {
@@ -25,27 +34,45 @@ img {
   flex-wrap: wrap;
 }
 
-h2 {
+h1 {
+  font-family: 'Mukta', sans-serif;
   align-self: start;
+  color: var(--dark);
+  margin: 1rem 0;
 }
 
-h1 {
-  font-family: arial, sans-serif;
+h2 {
   align-self: start;
+  font-family: 'Mukta', sans-serif;
+  color: var(--light);
+  margin: 0.5rem 0;
 }
 
 .release > p {
   align-self: start;
+  font-family: 'Mukta', sans-serif;
+  color: var(--light);
+  margin: 0.5rem 0;
 }
 
 nav {
   position: sticky;
   top: 0;
   z-index: 99;
-  background-color: #212121;
+  background-color: var(--bg);
   margin: 0;
   width: 100%;
+  display: flex;
+  box-shadow: 0 3px 5px #00000020;
 }
+
+.menu-link {
+  font-family: 'Mukta', sans-serif;
+  color: var(--dark);
+  padding: 20px;
+  text-decoration: none;
+}
+
 
 
 
