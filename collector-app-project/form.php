@@ -14,16 +14,24 @@
 
 <body>
     <?php include "header.html"; ?>
-    <div>
+    <div class="form">
         <form action="form-handling.php" method="post" enctype="multipart/form-data">
-            <label for="artistname">Artist</label>
-            <input type="text" id="artistname" name="artist" required><br>
-            <label for="releasename">Release name</label>
-            <input type="text" id="releasename" name="release" required><br>
+            <div class="form-input">
+                <label for="artistname">Artist</label>
+                <input type="text" id="artistname" name="artist" required>
+            </div>
+            <div class="form-input">
+                <label for="releasename">Release name</label>
+                <input type="text" id="releasename" name="release" required>
+            </div>
+            <div class="form-input">
             <label for="labelname">Label</label>
-            <input type="text" id="labelname" name="label" required><br>
+            <input type="text" id="labelname" name="label" required>
+            </div>
+            <div class="form-input">
             <label for="yearname">Year</label>
-            <input type="text" id="yearname" name="year" required><br>
+            <input type="text" id="yearname" name="year" required>
+            </div>
             <label for="format">Format</label>
             <select id="format" name="format" required>
                 <option value="1">7"</option>

@@ -1,8 +1,8 @@
 <?php
 
-require_once 'show-collection.php';
-require_once 'db-connection.php';
+require_once 'functions.php';
 
+$pdo = connectToDb('collector-app');
 $dbdata = fetchAllReleaseData($pdo);
 
 ?>
@@ -21,8 +21,11 @@ $dbdata = fetchAllReleaseData($pdo);
 <body>
     <?php include "header.html"; ?>
 	<div class="release-container">
-		<?php displayReleases($dbdata); ?>
+		<?php echo displayReleases($dbdata); ?>
 	</div>
+    <footer class="footer">
+        <a class="footer-link" href="index.php">Back to top</a>
+    </footer>
 </body>
 
 </html>

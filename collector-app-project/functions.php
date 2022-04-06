@@ -69,3 +69,21 @@ function fetchAllReleaseData(PDO $dbConnection): array
     return fetchAll($dbConnection, $sql);
 }
 
+
+function displayReleases(array $data): string
+{
+    $releaseComponent = '';
+
+    foreach ($data as $release){
+        $releaseComponent .=
+            '<div class="release">'
+            . '<img alt="" src="images/' . $release['image_url'] . '">'
+            . '<div class="main-text"><h1>' . $release['artist'] . '</h1>'
+            . '<h2>' . $release['release_name'] . '</h2>'
+            . '<p>' . $release['label'] . '</p></div>'
+            . '<div class="year-release"><p>' . $release['year'] . '</p>'
+            . '<p>' . $release['format'] . '</p></div>'
+            . '</div>';
+    }
+    return $releaseComponent;
+}

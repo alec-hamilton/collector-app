@@ -1,6 +1,6 @@
 <?php
 
-require_once 'db-connection.php';
+require_once 'functions.php';
 
 function uploadFile(): string
 {
@@ -116,17 +116,17 @@ function dataValidation(array $formData): bool
     } else throw new InvalidArgumentException('Invalid year input.');
 }
 
-$imageString = uploadFile();
+$imageString = uploadFile(); // this calls the function and puts the return value in $imageString
 
-if (strpos(strtolower($imageString), 'success')) {
+if (strpos(strtolower($imageString), 'success')) { // if the variable contains the string 'success'
 
-    $imageString = substr($imageString, 9);
+    $imageString = substr($imageString, 9); // remove the first 9 characters from -success-
 
-    $valid = dataValidation($_POST);
+    $valid = dataValidation($_POST); // this is my validation - can ignore
 
-    $pdo = connectToDb('collector-app');
+    $pdo = connectToDb('collector-app'); // connect to db
 
-    $inserted = addToDb($_POST, $pdo, $imageString);
+    $inserted = addToDb($_POST, $pdo, $imageString); // add to db
 }
 
 header("Location: index.php");
