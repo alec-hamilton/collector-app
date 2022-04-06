@@ -23,7 +23,6 @@ $dbdata = fetchAllReleaseData($pdo);
 	<div class="release-container">
 		<?php displayReleases($dbdata); ?>
 	</div>
-
 </body>
 
 </html>
