@@ -7,14 +7,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Page Title</title>
+	<title>Submit New Entry</title>
 	<link href="css/normalize.css" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <?php include "header.html"; ?>
+    <nav class="nav">
+        <a href="index.php"><i class="fa-solid fa-arrow-left"></i></a>
+    </nav>
     <div class="form">
+        <h1>Submit new entry</h1>
         <form action="form-handling.php" method="post" enctype="multipart/form-data">
             <div class="form-input">
                 <label for="artistname">Artist</label>

@@ -13,18 +13,22 @@ $dbdata = fetchAllReleaseData($pdo);
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Page Title</title>
+	<title>Alec's Record Collection</title>
 	<link href="css/normalize.css" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <?php include "header.html"; ?>
+    <nav class="nav">
+        <a class="menu-link" href="index.php">Alec's Record Collection</a>
+        <a href="form.php"><i class="fa-solid fa-plus"></i></a>
+    </nav>
 	<div class="release-container">
 		<?php echo displayReleases($dbdata); ?>
 	</div>
     <footer class="footer">
-        <a class="footer-link" href="index.php">Back to top</a>
+        <button onclick="window.location.href='#';" class="footer-link">Back to top</button>
     </footer>
 </body>
 
