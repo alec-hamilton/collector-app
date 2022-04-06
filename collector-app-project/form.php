@@ -21,27 +21,33 @@
                 <input type="text" id="artistname" name="artist" required>
             </div>
             <div class="form-input">
-                <label for="releasename">Release name</label>
+                <label for="releasename">Release</label>
                 <input type="text" id="releasename" name="release" required>
             </div>
             <div class="form-input">
-            <label for="labelname">Label</label>
-            <input type="text" id="labelname" name="label" required>
+                <label for="labelname">Label</label>
+                <input type="text" id="labelname" name="label" required>
             </div>
             <div class="form-input">
-            <label for="yearname">Year</label>
-            <input type="text" id="yearname" name="year" required>
+                <label for="yearname">Year</label>
+                <input type="text" id="yearname" name="year" required>
             </div>
-            <label for="format">Format</label>
-            <select id="format" name="format" required>
-                <option value="1">7"</option>
-                <option value="2">10"</option>
-                <option value="3">12"</option>
-                <option value="4">2x12"</option>
-            </select><br>
-            <label for="fileupload">Upload cover image</label>
-            <input type="file" id="fileupload" name="newFile" required><br>
-            <input type="submit" value="Submit">
+            <div class="dropdown">
+                <label for="format">Format</label>
+                <select id="format" name="format" required>
+                    <option value="1">7"</option>
+                    <option value="2">10"</option>
+                    <option value="3">12"</option>
+                    <option value="4">2x12"</option>
+                </select>
+            </div>
+            <div class="upload">
+                <label for="fileupload">Upload cover image</label>
+                <input type="file" id="fileupload" name="newFile" required>
+            </div>
+            <div class="submit-button">
+                <input id="submit" type="submit" value="Submit">
+            </div>
         </form>
     </div>
 </body>
