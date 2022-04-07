@@ -11,10 +11,10 @@ $dbdata = fetchAllReleaseData($pdo);
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Alec's Record Collection</title>
-	<link href="css/normalize.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alec's Record Collection</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/all.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
@@ -27,9 +27,9 @@ $dbdata = fetchAllReleaseData($pdo);
         </div>
         <a href="form.php"><i class="fa-solid fa-plus"></i></a>
     </nav>
-	<div class="release-container">
-		<?php echo displayReleases($dbdata); ?>
-	</div>
+    <div class="release-container">
+        <?php echo displayReleases($dbdata); ?>
+    </div>
     <footer class="footer">
         <button onclick="window.location.href='#';" class="footer-link">Back to top</button>
     </footer>
