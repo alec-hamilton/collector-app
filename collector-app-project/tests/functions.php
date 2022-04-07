@@ -25,7 +25,7 @@ class Functions extends TestCase
             'year' => '2022',
             'format' => '7"',
             'image_url' => 'R-22458883-1646926153-9657.jpeg'
-            ];
+        ];
 
         $result = displayReleases($array);
 
@@ -82,6 +82,3 @@ class Functions extends TestCase
     }
 
 }
-
-
-
