@@ -69,7 +69,6 @@ function fetchAllReleaseData(PDO $dbConnection): array
     return fetchAll($dbConnection, $sql);
 }
 
-
 function displayReleases(array $data): string
 {
     $releaseComponent = '';
@@ -77,7 +76,7 @@ function displayReleases(array $data): string
     foreach ($data as $release){
         $releaseComponent .=
             '<div class="release">'
-            . '<img alt="" src="images/' . $release['image_url'] . '">'
+            . '<div class="image-box"><img alt="" src="images/' . $release['image_url'] . '"></div>'
             . '<div class="main-text"><h1>' . $release['artist'] . '</h1>'
             . '<h2>' . $release['release_name'] . '</h2>'
             . '<p>' . $release['label'] . '</p></div>'
@@ -86,4 +85,26 @@ function displayReleases(array $data): string
             . '</div>';
     }
     return $releaseComponent;
+}
+
+function dataValidation(array $formData): bool
+{
+    $year = $formData['year']; // validate year
+
+    if ($year > 1800 && $year < 2150 && is_numeric($year) == true && strlen($year) == 4) {
+        return true;
+    } else return false;
+}
+
+function trimImageString(string $successString): string
+{
+    if (strpos(strtolower($successString), 'success')) {
+
+        $successString = substr($successString, 9);
+
+    } else {
+
+        $successString = 'fail';
+    }
+    return $successString;
 }

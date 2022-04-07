@@ -107,26 +107,14 @@ function addToDb(array $formData, PDO $pdo, string $imageName): bool
     return $inserted;
 }
 
-function dataValidation(array $formData): bool
-{
-    $year = $formData['year']; // validate year
-
-    if ($year > 1800 && $year < 2150 && is_numeric($year) == true && strlen($year) == 4) {
-        return true;
-    } else throw new InvalidArgumentException('Invalid year input.');
-}
-
 $imageString = uploadFile(); // this calls the function and puts the return value in $imageString
 
-if (strpos(strtolower($imageString), 'success')) { // if the variable contains the string 'success'
+$imageString = trimImageString($imageString);
 
-    $imageString = substr($imageString, 9); // remove the first 9 characters from -success-
+    if ($imageString !== 'fail') {
+        $pdo = connectToDb('collector-app'); // connect to db
 
-    $valid = dataValidation($_POST); // this is my validation - can ignore
-
-    $pdo = connectToDb('collector-app'); // connect to db
-
-    $inserted = addToDb($_POST, $pdo, $imageString); // add to db
-}
+        $inserted = addToDb($_POST, $pdo, $imageString); // add to db
+    }
 
 header("Location: index.php");

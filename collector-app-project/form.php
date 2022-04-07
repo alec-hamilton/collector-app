@@ -42,7 +42,8 @@
                     <option value="1">7"</option>
                     <option value="2">10"</option>
                     <option value="3">12"</option>
-                    <option value="4">2x12"</option>
+                    <option value="4">2 x 12"</option>
+                    <option value="5">3 x 12"</option>
                 </select>
             </div>
             <div class="upload">

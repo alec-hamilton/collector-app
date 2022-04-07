@@ -30,11 +30,6 @@ img {
   box-shadow: 0 3px 5px #00000005;
 }
 
-.release > img {
-  align-self: center;
-  flex-grow: 1;
-}
-
 .release-container {
   display: flex;
   flex-wrap: wrap;
@@ -122,6 +117,11 @@ i {
 
 .main-text {
   background-color: var(--bg);
+  flex-grow: 1;
+}
+
+.image-box {
+  font-size: 0;
 }
 
 .footer {
