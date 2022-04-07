@@ -63,9 +63,48 @@ function fetchAllReleaseData(PDO $dbConnection): array
     $sql = 'SELECT `releases`.`id`, `releases`.`artist`, `releases`.`release_name`,'
         . '`releases`.`label`, `releases`.`year`, `formats`.`format`, `releases`.`image_url`'
         . 'FROM `releases`'
-	    . 'INNER JOIN `formats`'
-	    . 'ON `releases`.`format` = `formats`.`id`;';
+        . 'INNER JOIN `formats`'
+        . 'ON `releases`.`format` = `formats`.`id`;';
 
     return fetchAll($dbConnection, $sql);
 }
 
+function displayReleases(array $data): string
+{
+    $releaseComponent = '';
+
+    foreach ($data as $release){
+        $releaseComponent .=
+            '<div class="release">'
+            . '<div class="image-box"><img alt="" src="images/' . $release['image_url'] . '"></div>'
+            . '<div class="main-text"><h1>' . $release['artist'] . '</h1>'
+            . '<h2>' . $release['release_name'] . '</h2>'
+            . '<p>' . $release['label'] . '</p></div>'
+            . '<div class="year-release"><p>' . $release['year'] . '</p>'
+            . '<p>' . $release['format'] . '</p></div>'
+            . '</div>';
+    }
+    return $releaseComponent;
+}
+
+function dataValidation(array $formData): bool
+{
+    $year = $formData['year']; // validate year
+
+    if ($year > 1800 && $year < 2150 && is_numeric($year) == true && strlen($year) == 4) {
+        return true;
+    } else return false;
+}
+
+function trimImageString(string $successString): string
+{
+    if (strpos(strtolower($successString), 'success')) {
+
+        $successString = substr($successString, 9);
+
+    } else {
+
+        $successString = 'fail';
+    }
+    return $successString;
+}

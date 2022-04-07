@@ -1,9 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #F7F7F7;
+  --light: #83C5BE;
+  --dark: #1A5E63;
+  --newbg: #EAEAEA;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   padding: 0;
+  background-color: var(--newbg);
 }
 
 img {
@@ -14,10 +24,10 @@ img {
 .release {
   display: flex;
   flex-direction: column;
-  width: 310px;
-  padding: 10px;
+  width: 85vw;
+  padding-top: 1.5rem;
   margin: 0 auto;
-  align-items: center;
+  box-shadow: 0 3px 5px #00000005;
 }
 
 .release-container {
@@ -25,30 +35,332 @@ img {
   flex-wrap: wrap;
 }
 
+h1 {
+  font-family: 'Mukta', sans-serif;
+  align-self: start;
+  color: var(--dark);
+  padding: 1rem;
+  margin: 0;
+}
+
 h2 {
   align-self: start;
+  font-family: 'Mukta', sans-serif;
+  color: var(--light);
+  padding: 0 1rem;
+  margin: 0;
 }
 
-h1 {
-  font-family: arial, sans-serif;
+.main-text > p {
   align-self: start;
-}
-
-.release > p {
-  align-self: start;
+  font-family: 'Mukta', sans-serif;
+  color: var(--light);
+  padding: 0.75rem 1rem;
+  margin: 0;
 }
 
 nav {
   position: sticky;
   top: 0;
   z-index: 99;
-  background-color: #212121;
+  background-color: #FFFFFF;
   margin: 0;
   width: 100%;
+  display: flex;
+  box-shadow: 0 3px 5px #00000005;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media only screen and (min-width: 700px){
+.menu-link {
+  font-family: 'Mukta', sans-serif;
+  color: var(--dark);
+  padding: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.fa-compact-disc {
+  transition: 1.5s;
+  transition-timing-function: linear;
+}
+
+.fa-compact-disc:hover {
+  transform: rotate(540deg);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+i {
+  font-size: 30px;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--dark);
+  transition: 0.4s;
+}
+
+.fa-plus:hover {
+  transform: rotate(180deg);
+  opacity: 20%;
+}
+
+.fa-arrow-left:hover {
+  transform: translate(-5px);
+}
+
+.form > h1 {
+  padding: 0 0 1.5rem 0;
+}
+
+.year-release {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  padding: 0 1rem;
+}
+
+.year-release > p {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 400;
+  color: var(--light);
+}
+
+.main-text {
+  background-color: var(--bg);
+  flex-grow: 1;
+}
+
+.image-box {
+  font-size: 0;
+}
+
+.footer {
+  background-color: #FFFFFF;
+  width: 85vw;
+  margin: 1.5rem auto;
+  padding: 0;
+  display: flex;
+  box-shadow: 0 3px 5px #00000005;
+}
+
+.footer-link {
+  font-family: 'Mukta', sans-serif;
+  color: var(--dark);
+  font-weight: 600;
+  text-decoration: none;
+  flex-grow: 1;
+  border-width: 0;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  cursor: pointer;
+  background-color: var(--dark);
+  color: #FFFFFF;
+}
+
+.form {
+  display: flex;
+  margin: 1.5rem auto 0 auto;
+  flex-direction: column;
+  width: 85vw;
+  max-width: 400px;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border-radius: 0;
+  box-shadow: 0 1px 5px #00000005;
+}
+
+.form-input {
+  display: grid;
+  align-items: center;
+  padding-bottom: 1rem;
+  grid-template-columns: 1fr 3fr;
+}
+
+label {
+  font-family: 'Mukta', sans-serif;
+  color: var(--dark);
+  font-weight: 500;
+  padding-right: 1rem;
+}
+
+.dropdown {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+:focus-visible {
+  outline: solid 2px var(--dark);
+  border-radius: 0;
+}
+
+#format {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 300;
+  color: var(--dark);
+  border-color: var(--light);
+  border-width: 2px;
+  border-radius: 0;
+  background-color: var(--bg);
+}
+
+.upload > label {
+  color: var(--dark);
+  font-family: 'Mukta', sans-serif;
+}
+
+.upload {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding-bottom: 2rem;
+  align-items: center;
+}
+
+#fileupload {
+  color: var(--dark);
+  font-family: 'Mukta', sans-serif;
+}
+
+.submit-button {
+  display: flex;
+}
+
+#submit {
+  font-family: 'Mukta', sans-serif;
+  background-color: var(--dark);
+  padding: 0.4rem 1rem;
+  border-radius: 0;
+  border: solid 2px var(--dark);
+  flex-grow: 1;
+  color: #FFFFFF;
+  transition: 0.3s;
+  box-shadow: 0 1px 5px #00000020;
+}
+
+#submit:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+  color: var(--dark);
+  border: solid 2px var(--dark);
+}
+
+.form-input > input {
+  border-color: var(--light);
+  background-color: var(--bg);
+  border-width: 2px;
+  border-radius: 0;
+  font-family: 'Mukta', sans-serif;
+  color: var(--light);
+  border-style: solid;
+  font-weight: 300;
+}
+
+.submit-button > input{
+  margin: 0;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-button {
+  background-color: #FFFFFF;
+  margin: 0;
+  outline: none;
+  border: solid 2px var(--light);
+  padding: 0.8rem;
+  box-shadow: 2px 2px 5px #00000020;
+  color: var(--dark);
+  align-items: end;
+  grid-column-start: 2;
+  transition: 0.3s;
+}
+
+.upload-button:hover {
+  background-color: var(--dark);
+  border: solid 2px var(--dark);
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.upload > p {
+  font-family: 'Mukta', sans-serif;
+  color: var(--dark);
+  font-weight: 500;
+  padding-right: 1rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .release-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.2rem;
+    width: 85vw;
+    margin: 0 auto;
+    padding-top: 1.2rem;
+  }
+
+  .release {
+    width: auto;
+    padding-top: 0;
+  }
 
 }
 
+@media only screen and (min-width: 1050px) {
+  .release-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.2rem;
+    width: 85vw;
+    margin: 0 auto;
+    padding-top: 1.2rem;
+  }
 
+  .release {
+    width: auto;
+    padding-top: 0;
+  }
+
+}
+
+@media only screen and (min-width: 1400px) {
+  .release-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.2rem;
+    width: 85vw;
+    margin: 0 auto;
+    padding-top: 1.2rem;
+  }
+
+  .release {
+    width: auto;
+    padding-top: 0;
+  }
+
+}
+
+@media only screen and (min-width: 1500px) {
+  .release-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.2rem;
+    width: 1225px;
+    margin: 0 auto;
+  }
+
+  .release {
+    width: 307px;
+  }
+
+}
