@@ -16,7 +16,7 @@ $dbdata = fetchAllReleaseData($pdo);
 	<title>Alec's Record Collection</title>
 	<link href="css/normalize.css" rel="stylesheet">
     <link href="css/all.min.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>

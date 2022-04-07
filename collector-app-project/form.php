@@ -10,7 +10,7 @@
 	<title>Submit New Entry</title>
 	<link href="css/normalize.css" rel="stylesheet">
     <link href="css/all.min.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
