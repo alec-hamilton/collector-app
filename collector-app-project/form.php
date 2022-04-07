@@ -18,7 +18,7 @@
         <a href="index.php"><i class="fa-solid fa-arrow-left"></i></a>
     </nav>
     <div class="form">
-        <h1>Submit new entry</h1>
+        <h1>Add to collection</h1>
         <form action="form-handling.php" method="post" enctype="multipart/form-data">
             <div class="form-input">
                 <label for="artistname">Artist</label>
@@ -47,7 +47,8 @@
                 </select>
             </div>
             <div class="upload">
-                <label for="fileupload">Upload cover image</label>
+                <p>Image</p>
+                <label for="fileupload" class="upload-button">Upload cover image</label>
                 <input type="file" id="fileupload" name="newFile" required>
             </div>
             <div class="submit-button">
