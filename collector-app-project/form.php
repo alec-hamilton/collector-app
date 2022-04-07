@@ -38,7 +38,7 @@
             </div>
             <div class="dropdown">
                 <label for="format">Format</label>
-                <select id="format" name="format" required>
+                <select id="format" name="format">
                     <option value="1">7"</option>
                     <option value="2">10"</option>
                     <option value="3">12"</option>
