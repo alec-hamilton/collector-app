@@ -16,12 +16,15 @@ $dbdata = fetchAllReleaseData($pdo);
 	<title>Alec's Record Collection</title>
 	<link href="css/normalize.css" rel="stylesheet">
     <link href="css/all.min.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
     <nav class="nav">
-        <a class="menu-link" href="index.php">Alec's Record Collection</a>
+        <div class="logo">
+            <a href="index.php"><i class="fa-solid fa-compact-disc"></i></a>
+            <a class="menu-link" href="index.php">Alec's Record Collection</a>
+        </div>
         <a href="form.php"><i class="fa-solid fa-plus"></i></a>
     </nav>
 	<div class="release-container">
