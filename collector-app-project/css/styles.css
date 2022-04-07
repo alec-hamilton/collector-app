@@ -27,10 +27,12 @@ img {
   width: 85vw;
   padding-top: 1.5rem;
   margin: 0 auto;
+  box-shadow: 0 3px 5px #00000005;
 }
 
 .release > img {
   align-self: center;
+  flex-grow: 1;
 }
 
 .release-container {
@@ -66,12 +68,13 @@ nav {
   position: sticky;
   top: 0;
   z-index: 99;
-  background-color: var(--bg);
+  background-color: #FFFFFF;
   margin: 0;
   width: 100%;
   display: flex;
-  box-shadow: 0 3px 5px #00000020;
+  box-shadow: 0 3px 5px #00000005;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menu-link {
@@ -79,14 +82,36 @@ nav {
   color: var(--dark);
   padding: 20px;
   text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
 
+i {
+  font-size: 30px;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--dark);
+  transition: 0.4s;
+}
+
+.fa-plus:hover {
+  transform: rotate(180deg);
+  opacity: 20%;
+}
+
+.fa-arrow-left:hover {
+  transform: translate(-5px);
+}
+
+.form > h1 {
+  padding: 0 0 1.5rem 0;
 }
 
 .year-release {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   background-color: #ffffff;
-  padding-left: 1rem;
+  padding: 0 1rem;
 }
 
 .year-release > p {
@@ -103,8 +128,9 @@ nav {
   background-color: #FFFFFF;
   width: 85vw;
   margin: 1.5rem auto;
-  padding: 1rem;
+  padding: 0;
   display: flex;
+  box-shadow: 0 3px 5px #00000005;
 }
 
 .footer-link {
@@ -112,35 +138,184 @@ nav {
   color: var(--dark);
   text-decoration: none;
   flex-grow: 1;
+  border-width: 0;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  cursor: pointer;
+  background-color: var(--dark);
+  color: #FFFFFF;
 }
 
 .form {
   display: flex;
-  margin: 0 auto;
+  margin: 1.5rem auto 0 auto;
   flex-direction: column;
   width: 85vw;
-  padding-top: 1.5rem;
+  max-width: 400px;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border-radius: 0;
+  box-shadow: 0 1px 5px #00000005;
 }
 
 .form-input {
-  display: flex;
+  display: grid;
+  align-items: center;
+  padding-bottom: 1rem;
+  grid-template-columns: 1fr 3fr;
 }
 
 label {
   font-family: 'Mukta', sans-serif;
   color: var(--dark);
+  padding-right: 1rem;
 }
 
-input {
-  margin: 0 1rem 1rem 1rem;
+.dropdown {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+:focus-visible {
+  outline: solid 2px var(--dark);
+  border-radius: 0;
+}
+
+#format {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 300;
+  color: var(--dark);
+  border-color: var(--light);
+  border-width: 1px;
+  border-radius: 0;
+  background-color: var(--bg);
+}
+
+.upload > label {
+  color: var(--dark);
+  font-family: 'Mukta', sans-serif;
+}
+
+.upload {
+  display: flex;
+  padding-bottom: 2rem;
+  align-items: center;
+}
+
+#fileupload {
+  color: var(--dark);
+  font-family: 'Mukta', sans-serif;
+}
+
+.submit-button {
+  display: flex;
+}
+
+#submit {
+  font-family: 'Mukta', sans-serif;
+  background-color: var(--dark);
+  padding: 0.4rem 1rem;
+  border-radius: 0;
+  border-width: 0;
   flex-grow: 1;
+  color: #FFFFFF;
+  transition: 0.3s;
+  box-shadow: 0 1px 5px #00000020;
 }
 
-@media only screen and (min-width: 600px) {
-  .release {
-    width: 280px;
-  }
+#submit:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+  color: var(--dark);
 }
+
+.form-input > input {
+  border-color: var(--light);
+  background-color: var(--bg);
+  border-width: 1px;
+  border-radius: 0;
+  font-family: 'Mukta', sans-serif;
+  color: var(--light);
+  border-style: solid;
+  font-weight: 300;
+}
+
+.submit-button > input{
+  margin: 0;
+}
+
+@media only screen and (min-width: 680px) {
+  .release-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.2rem;
+    width: 85vw;
+    margin: 0 auto;
+    padding-top: 1.2rem;
+  }
+
+  .release {
+    width: auto;
+    padding-top: 0;
+  }
+
+}
+
+@media only screen and (min-width: 1050px) {
+  .release-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.2rem;
+    width: 85vw;
+    margin: 0 auto;
+    padding-top: 1.2rem;
+  }
+
+  .release {
+    width: auto;
+    padding-top: 0;
+  }
+
+}
+
+@media only screen and (min-width: 1400px) {
+  .release-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.2rem;
+    width: 85vw;
+    margin: 0 auto;
+    padding-top: 1.2rem;
+  }
+
+  .release {
+    width: auto;
+    padding-top: 0;
+  }
+
+}
+
+@media only screen and (min-width: 1500px) {
+  .release-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.2rem;
+    width: 1225px;
+    margin: 0 auto;
+  }
+
+  .release {
+    width: 307px;
+  }
+
+}
+
 
 
 
