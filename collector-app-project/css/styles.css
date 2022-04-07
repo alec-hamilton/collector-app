@@ -150,6 +150,7 @@ i {
 .footer-link {
   font-family: 'Mukta', sans-serif;
   color: var(--dark);
+  font-weight: 600;
   text-decoration: none;
   flex-grow: 1;
   border-width: 0;
