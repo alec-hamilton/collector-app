@@ -10,11 +10,6 @@ Clone this repo:
 ```bash
 git@github.com:alec-hamilton/collector-app.git
 ```
-Navigate into the newly created repo:
-
-```bash
-cd collector-app
-```
 
 Run the following SQL file in a MySQL database management app.
 
@@ -29,6 +24,14 @@ username: root
 password: password
 ```
 Open `index.php` to run the app.
+
+## Screenshots
+
+Record collection display screen
+![Alt text](screenshots/homepage.png?raw=true "Record collection display screen")
+
+Add to collection form
+![Alt text](screenshots/form.png?raw=true "Add to collection form")
 
 ## Authors
 
