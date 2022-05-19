@@ -2,7 +2,7 @@
 An app to display my record collection.
 
 ## Description
-Alec's Record Collection is a PHP app that displays a collection of records stored in a MySQL database. You can add a new record, including and image, to the collection using the purpose built form.
+Alec's Record Collection is a fully responsive PHP web-app that displays a collection of records stored in a MySQL database. You can add a new record, including and image, to the collection using the purpose built form.
 
 ## Getting Started
 Clone this repo:
